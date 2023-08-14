@@ -1,0 +1,26 @@
+Linear Search- 
+linear search is an algorithm which basically iterates through all they elements and compare with key to find a certain element.
+here,
+1. every element gets compared with the element we need to find 
+2. just when the comparison is succesful our search gets completed
+
+Basic Code for Linear Search- 
+
+#driver's code
+'''arr=[1,2,45,67,23]
+key=45'''
+for i in range(0,len(arr)):
+    if(key==arr[i]):
+        print(i)
+
+complexity analysis of linear search- 
+
+1. the best case scenerio might be that the key was found in the first place, so complexity becomes O(1)
+
+2. the worst case scenerio might be that the element will be found at the end of list
+so complexity becomes O(n) 
+
+
+Diadvantage- linear complexity is a very lengthy process as it have complexity O(n) too 
+
+we can use linear search when we are dealing with small dataset
