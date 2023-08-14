@@ -1,0 +1,39 @@
+Binary Search- 
+
+to implement binary search the array should be sorted !
+
+It divides the array into 3 parts, left right and middle(mid)
+and they key is compared to the mid and if key== mid then the program is terminated. 
+
+LOGIC- the data is divided into 3 parts, left, right and middle and the key is compared coming from left to right and then left and right is also divided into 3 parts and the array is divided a lot of times 
+
+mid= left + (right - left)/2 
+
+to have better pictorial explaination- 
+https://youtu.be/13ocRMSJy5M?si=aID1wCofYK8JSVOM
+
+Solved- 
+
+arr=[12,3,4,5,11]
+key=12
+s=0
+e=len(arr)
+mid= s+(e-1)//2
+while s<=e:
+    if (arr[mid] == key):
+        print(mid)
+    elif arr[mid] > key:
+        e= mid-1 
+    else:
+        s=mid+1   
+return 0
+
+
+Time complexity- 
+Best Case is O(1) when mid is the key
+Average Case is O(log n)
+Best case is also O(log n)
+
+Advantages of Binary Search- 
+
+1. Binary Search is faster than Linear Search especially for large arrays 
