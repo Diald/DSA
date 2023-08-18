@@ -1,0 +1,26 @@
+Bubble Sorting- 
+
+Sorting is to arrange the elements from lower to higher value i.e in ascending order. Bubble sort is the easiest way to sort an array or list. usually in python we can use arr_name.sort(). 
+In bubble sort we take 1 element and compare it with its consecutive 2 element. if 2 is less than 1 we swap it and we swap it till end. but it doesnt get sorted by comparing till end. we have to repeat this entire thing n-1 times. so we will have 2 loops one for the comparision and other for 
+
+for better understanding use 
+
+https://youtu.be/xcPFUCh0jT0?si=pRSWZUWBBeN_Qwy0
+
+Code for bubble sorting- 
+
+n= len(arr)
+for i in range (0,n):
+    for j in range(0,n-i-1):
+        if arr[j]>arr[j+1]:
+            arr[j],arr[j+1]=arr[j+1],arr[j]
+
+
+
+ADVANTAGES OF BUBBLE SORT- 
+1. it is easy to understand and implement
+2. it does not require any extra memory space
+3. it is a stable sorting algorithm, meaning that elements with same key value maintain their relative order in sorted output
+
+DISADVANTAGES- 
+1. it have a very high time complexity of O(n^2) 
