@@ -9,6 +9,7 @@ Basic Code for Linear Search-
 #driver's code
 '''arr=[1,2,45,67,23]
 key=45'''
+
 for i in range(0,len(arr)):
     if(key==arr[i]):
         print(i)
