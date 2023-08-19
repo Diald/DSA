@@ -1,0 +1,9 @@
+if there are 25 horses and maximum 5 can race at a time, what is the minimum number of times we can race horses to get 3 fastest horses
+horses=int(35)
+count=0
+for i in range(1,4):
+    out= horses//5*2
+    n= horses- out
+    horses=n
+
+print(n)
