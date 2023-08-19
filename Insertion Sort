@@ -1,0 +1,49 @@
+Insertion Sort
+
+it works by swapping as inserting in between greater than less than. for example 23 is more than 8 but less than 45 thus we keep it in between these 2 elements. 
+consider an array = [12,11,13,5,6]
+First pass:
+in first pass we compare the first 2 elements and swap them in ascending order. here 12 and 11 are not in ascending thus we swap them to get- 
+[11,12,13,5,6]
+
+Second Pass: 
+now we go to next pair 12, 13 are in right order so we do not swap them 
+[11,12,13,5,6]
+
+Third Pass:
+next iteration 13 and 5 are not sorted we swap them to get 
+[11,12,5,13,6]
+here again 12 and 5 are not swapped so we swap again. 
+[11,5,12,13,6]
+then again 5 and 11 are not swapped so we swap again:
+[5,11,12,13,6]
+
+Fourth Pass:
+now we look at final pair 13 and 6 which are not in correct order thus we swap them again to get- 
+[5,11,12,6,13]
+again 12 and 6 is not in correct order thus we swap- 
+[5,11,6,12,13]
+again 11 and 6 not in correct order thus we swap- 
+[5,6,11,12,13]
+this is the final sorted array 
+
+here we will need one loop for each pass it goes through and another loop to recheck all the pairs and swap them. so code becomes- 
+
+
+arr= [11,12,13,5,6]
+for i in range (1,len(arr)):
+    current= arr[i]
+    j= i-1
+    while j>0 and arr[j]>current:
+        arr[j+1]=arr[j]
+    arr[j+1]= current
+
+
+
+Complexity Analysis- 
+1. the worst case time complexity is if we have to go through all the elements for sorting i.e O(n^2)
+2. The average case will also be O(n^2)
+3.The best case scenerio is if the array gets sorted in first pass i.e O(n)
+
+Frequently asked questions- 
+https://www.geeksforgeeks.org/insertion-sort/
