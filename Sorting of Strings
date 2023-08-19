@@ -1,0 +1,13 @@
+Sorting of strings is somewhat different than sorting in lists or arrays. some methods of sorting a string are- 
+
+1. Using sorted(s)
+
+2. using 
+s_1= ''.join(sorted(s))
+#but this method takes up more memory 
+
+3. by converting first into a list then .sort()
+s_1 = list(s)
+s.sort()
+
+the best method would be to use sorted(s) since it does not involve more variable declaration.
