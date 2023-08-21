@@ -5,7 +5,7 @@ to implement binary search the array should be sorted !
 It divides the array into 3 parts, left right and middle(mid)
 and they key is compared to the mid and if key== mid then the program is terminated. 
 
-LOGIC- the data is divided into 3 parts, left, right and middle and the key is compared coming from left to right and then left and right is also divided into 3 parts and the array is divided a lot of times 
+LOGIC- the data is divided into 3 parts, left, right and middle and the key is compared coming from left to right and then right to left is also divided into 3 parts and the array is divided a lot of times 
 
 mid= left + (right - left)/2 
 
