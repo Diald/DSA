@@ -1,0 +1,28 @@
+Selection Sort- 
+it works by repeatedly picking up the smallest element and placing it on the sorted position of the list. 
+
+we are replacing the minimum element to the first element and to do that we need to store the first value and minimum value for example- 
+arr= [64,25,12,22,11]
+here in first pass- 
+the first position where 64 is stored presently gets replaced to 11 after finding minimum
+
+arr=[64,25,12,22,11]
+for i in range(len(arr)):
+    min_idx=i #that is 64
+    for j in range(i+1,len(arr)):
+        if arr[min_idx]>arr[j]:
+            min_idx=j
+    arr[i],arr[min_idx]=arr[min_idx],arr[i]
+print(arr)
+            
+
+complexity analysis- 
+1. in all cases the overall complexity is O(N)
+auxillary space- as the only extra memory used is for temporary variables used while swapping 
+advantages of selection sort- 
+very less time and space complexity 
+disadvantages- 
+doesnt works well with large datasets 
+
+selection sort is not stable. 
+selection sort is in place algorithm as it does not require any extra space. 
