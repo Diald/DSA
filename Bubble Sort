@@ -1,7 +1,11 @@
 Bubble Sorting- 
 
 Sorting is to arrange the elements from lower to higher value i.e in ascending order. Bubble sort is the easiest way to sort an array or list. usually in python we can use arr_name.sort(). 
-In bubble sort we take 1 element and compare it with its consecutive 2 element. if 2 is less than 1 we swap it and we swap it till end. but it doesnt get sorted by comparing till end. we have to repeat this entire thing n-1 times. so we will have 2 loops one for the comparision and other for 
+In bubble sort we take 1 element and compare it with its consecutive 2 element. if 2 is less than 1 we swap it and we swap it till end. but it doesnt get sorted by comparing till end. we have to repeat this entire thing n-1 times. so we will have 2 loops one for the comparision and other for. here it is simply, in first pass we take first element and swap it with its consecutive element and keeps swapping till we get the largest element at end 
+
+APPROACH- 
+1. we take for loop in i to have first pass, second pass and so one. in first pass we will get first Largest element at the end of array 
+2. then we take a for loop in j to compare the current to its consecutive and swap consecutively till it iterates through entire loop 
 
 for better understanding use 
 
