@@ -1,0 +1,29 @@
+Algorithms- 
+algorithms is a set of sequence to solve a particular problem.
+
+Characteristics of an algorithm- 
+1. clear and unambiguous- each step must be clear and lead to only one meaning 
+2. well defined inputs- if an algorithm takes input, it should clearly states which input. an algorithm may or may not take an input. 
+3. Well- Defined Outputs- an algorithm should clearly define what output is being given 
+4. Finite- it should terminate after a finite period of time 
+5. Feasable- it should be executed with the available resources
+6. language independent- it must be a plain instructions that can be implemented in any language. 
+
+Properties of an Algorithm- 
+1. it should terminate after sometime
+2. it should give atleast one output. 
+3. it should take zero or one input 
+4. it should be deterministic that is giving same input for same input 
+
+TYPES OF ALGORITHMS- 
+
+1. Brute Force Algorithms 
+2. Recursive Algorithms 
+3. Backtracking Algorithms 
+4. Searching Algorithms 
+5. Sorting Algorithms 
+6. Hashing algorithms 
+7. Divide and conquer algorithms 
+8. Greedy Algorithm 
+9. Dynamic Programming 
+10.Randomized algorithm 
