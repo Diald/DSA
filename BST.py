@@ -40,3 +40,18 @@ class BinarySearchTree:
             result.append(current_node.value)
         traversal(self.root)
         return result
+    def pre_order_traversal(self):
+        if(root):
+            print(self.root.val)
+            pre_order_traversal(self.root.left)
+            pre_oder_traversal(self.root.right)
+    def post_order_traversal(self):
+        if(root):
+            post_order_traversal(self.root.left)
+            post_order_traversal(self.root.right)
+            print(root.val)
+    def in_order_traversal(self):
+        if(root):
+            in_order_traversal(self.root.left)
+            print(self.root.val)
+            in_order_traversal(self.root.right)
