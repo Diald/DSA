@@ -81,3 +81,33 @@ def climbingStairs(n):
 in this type of question it imitates Fibonacci question. also worth noting that this question is not for greedy, why because in this each step is determined but in greedy each step is determined by the value of each element at that step. idk if it makes sense, it made sense to me. 
 here we are making a dp array to store for each staircase how many steps it took and it is basic knowledge that the amount of steps taken to reach any step is the sum of the amount of steps taken to reach the previous as well as previous to previous step because either one or two steps is allowed. so similarly if three steps were also involved we would've added dp[i-3] as well.
 
+2. Pascal's Triangle - Fibb's 
+
+triangles will store all the rows of pascal's triangle. if number of rows required is none, return none then every triangle will have the same starting of [1], then we'll start a loop for iterating through every row, we initiate that row = [1] and the previous row as well. we'll have another iteration to have elements added into the row. it will be the sum of prev[j-1]+prev[j]. and we'll add the final 1 to the end of the row and attach it to the triangle array and so on. 
+
+def pascals_triangle(num):
+    triangle = []
+    if(num==0):
+        return triangle
+    triangle.append([1]) #start the dp with first element 
+    for i in range(1,num):
+        row = [1] # the new row to be added 
+        prev = triangle[-1]
+        
+        for j in range(1,i):
+            row.append(prev[j-1]+prev[j])
+        row.append(1)
+        triangle.append(row)
+    return triangle
+    
+
+3. House Robber I 
+
+here we will be initiating two pointers prev1 and prev2 here prev1 will hold what is the current best loot and prev2 will store what was the previous best loot. another alt way to think about it is that since we have to loot alternate houses, there are two chains of alternative one prev1 will hold and other prev2 will hold. 
+def robbing(nums):
+    prev1, prev2 = 0, 0 
+    for num in nums:
+        curr = max(prev2, prev1+num)
+        prev2 = prev1
+        prev1 = curr
+    return prev1
