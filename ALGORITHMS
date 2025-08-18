@@ -1,0 +1,83 @@
+🔷 Dynamic Programming (DP) – Must-Do Problems
+
+
+1. Climbing Stairs / Fibonacci Variants – base case DP
+2. House Robber I & II – non-adjacent choices
+3. Coin Change I & II – minimum coins / number of ways
+4. Knapsack (0/1, unbounded) – most classic
+5. Longest Common Subsequence (LCS) + Longest Common Substring
+6. Edit Distance / Minimum Operations to Convert String
+7. Longest Increasing Subsequence (LIS) + variants (Patience sorting optimization)
+8. Matrix Path Problems
+9. Minimum Path Sum
+10. Unique Paths I & II (with obstacles)
+11. Maximum Path in Triangle (classic DP)
+12. Palindrome DP
+13. Longest Palindromic Substring
+14. Longest Palindromic Subsequence
+15. Minimum Palindrome Partitioning
+16. Partition DP
+17. Subset Sum / Equal Partition
+18. Partition Array for Max Sum
+19. Burst Balloons
+20. Stock Buy and Sell (I, II, with Cooldown, with Transaction Fee)
+21. DP on Grids / Games
+22. Dungeon Game
+23. Cherry Pickup
+24. DP on Strings
+25. Wildcard Matching
+26. Regular Expression Matching
+27. DP on Trees / Graphs
+28. Tree DP (Max path sum, diameter, etc.)
+29. Word Break (DP with Hashing)
+30. Bitmask DP – Traveling Salesman Problem (TSP), Assignments problems
+
+🔶 Greedy – Must-Do Problems
+
+
+Greedy is less about memorizing patterns and more about recognizing when the local choice = global choice. These are the big ones:
+
+1. Activity / Interval Scheduling – max non-overlapping intervals
+2. Meeting Rooms / Minimum Platforms (interval merging)
+3. Job Sequencing Problem – with deadlines and profits
+4. Fractional Knapsack – classic greedy vs DP contrast
+5. Jump Game I & II – min jumps to reach end
+6. Gas Station Problem – circular route
+7. Candy Distribution / Minimum Arrows to Burst Balloons
+8. Greedy Strings
+9. Reorganize String
+10. Remove K Digits to form smallest number
+11. Huffman Coding (or min cost rope joining)
+12. Minimum Spanning Tree – Prim’s and Kruskal’s
+13. Dijkstra’s Algorithm (shortest path with priority queue) – greedy flavor
+14. Interval Problems
+15. Merge Intervals
+16. Insert Interval
+17. Erase Overlapping Intervals
+18. Scheduling / Load Balancing problems (Greedy fits beautifully)
+19. Monotonic Stack/Greedy Hybrid – Largest Rectangle in Histogram, Trapping Rain Water
+20. Greedy with Sorting – Assign Cookies, Two City Scheduling, Minimum Cost to Connect Sticks
+
+
+
+
+DYNAMIC PROGRAMMING - 
+
+1. Climbing Stairs
+
+QUESTION - https://leetcode.com/problems/climbing-stairs/?envType=problem-list-v2&envId=dynamic-programming 
+there are mainly two types of DP's - top down and bottom up. in top-down you try to think from final destination or solution, like you're climbing stairs upto the final point, in top down you think n-1, n-2, n-3,.. and so on, usually it requires recursive thinking including caching the values. in bottom-up you are building the solution from base upto n, like if you're trying to reach to the top of the staircase then, you start from the ground and try to reach to n.
+usually bottom up solution is preferred. 
+def climbingStairs(n):
+    if(n<=1):
+        return 1
+    dp = [0]*(n+1)
+    dp[0], dp[1] = 1, 1 # there is only one way to reach to the beginning and to the first staircase
+    for i in range(2, n+1):
+        dp[i] = dp[i-1] + dp[i-2]
+        
+    return dp[n]
+    
+in this type of question it imitates Fibonacci question. also worth noting that this question is not for greedy, why because in this each step is determined but in greedy each step is determined by the value of each element at that step. idk if it makes sense, it made sense to me. 
+here we are making a dp array to store for each staircase how many steps it took and it is basic knowledge that the amount of steps taken to reach any step is the sum of the amount of steps taken to reach the previous as well as previous to previous step because either one or two steps is allowed. so similarly if three steps were also involved we would've added dp[i-3] as well.
+
